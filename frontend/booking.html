@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CityArena – Book Now</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="siteHeader"></header>
+  <div class="container" id="bookingPage">
+    <h2>Book a slot</h2>
+
+    <div id="stepBook">
+      <section class="panel"><h3>1. Choose a sport</h3><div class="chips" id="sportChoice"></div></section>
+      <section class="panel"><h3>2. Choose a day</h3>
+        <p class="hint">You can book up to 7 days from today.</p>
+        <div class="chips" id="dayChoice"></div></section>
+      <section class="panel"><h3>3. Choose a time slot</h3><div class="chips" id="slotGrid"></div></section>
+      <section class="panel"><h3>4. Players</h3>
+        <div id="peopleBox" hidden>
+          <label for="people">Number of people (including you)</label>
+          <select id="people"></select>
+          <p class="hint" id="maxNote"></p>
+          <div id="friends"></div>
+        </div>
+        <p class="hint" id="fixedNote" hidden></p>
+        <p class="hint" id="playersHint">Choose a sport and slot first.</p>
+      </section>
+      <section class="panel"><h3>5. Your details</h3>
+        <label for="name">Full name</label><input id="name" type="text">
+        <label for="phone">Mobile number</label><input id="phone" type="text" maxlength="10">
+        <label for="email">Email (your account email)</label><input id="email" type="email" readonly>
+      </section>
+      <p class="price" id="priceBox"></p>
+      <p class="error" id="msg"></p>
+      <button class="btn" id="toPay" type="button">Proceed to payment</button>
+    </div>
+
+    <div id="stepPay" hidden>
+      <section class="panel">
+        <h3>Payment</h3>
+        <div class="summary" id="paySummary"></div>
+        <div class="pay-options">
+          <label><input type="radio" name="pay" value="UPI" checked>UPI</label>
+          <label><input type="radio" name="pay" value="Card">Card</label>
+          <label><input type="radio" name="pay" value="Net banking">Net banking</label>
+        </div>
+        <div id="payUPI"><label for="upiId">UPI ID</label><input id="upiId" placeholder="name@bank"></div>
+        <div id="payCard" hidden>
+          <label for="cardNo">Card number</label><input id="cardNo" inputmode="numeric" placeholder="16 digits">
+          <label for="cardExp">Expiry (MM/YY)</label><input id="cardExp" placeholder="08/29">
+          <label for="cardCvv">CVV</label><input id="cardCvv" inputmode="numeric" maxlength="3">
+        </div>
+        <div id="payNet" hidden>
+          <label for="bank">Bank</label>
+          <select id="bank"><option value="">Choose bank</option><option>State Bank of India</option><option>HDFC Bank</option><option>ICICI Bank</option><option>Axis Bank</option></select>
+        </div>
+        <p class="hint">Practice site: no real money is charged. Do not enter real card details.</p>
+        <p class="error" id="payMsg"></p>
+        <div class="actions">
+          <button class="btn btn-secondary" id="backBtn" type="button">Back</button>
+          <button class="btn" id="payBtn" type="button">Pay</button>
+        </div>
+      </section>
+    </div>
+  </div>
+  <footer>CityArena Stadium Booking</footer>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

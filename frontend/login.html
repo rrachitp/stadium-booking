@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CityArena – Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="siteHeader"></header>
+  <div class="container">
+
+    <section class="panel" id="loginBox">
+      <h2>Login</h2>
+      <label for="loginEmail">Email</label><input id="loginEmail" type="email">
+      <label for="loginPassword">Password</label><input id="loginPassword" type="password">
+      <p class="error" id="loginMsg"></p>
+      <button class="btn" id="loginBtn" type="button">Login</button>
+      <p class="hint">New here? <a href="#" id="showRegister">Create an account</a></p>
+    </section>
+
+    <section class="panel" id="registerBox" hidden>
+      <h2>Create account</h2>
+      <label for="regName">Full name</label><input id="regName" type="text">
+      <label for="regPhone">Mobile number</label><input id="regPhone" type="text" maxlength="10">
+      <label for="regEmail">Email</label><input id="regEmail" type="email">
+      <label for="regPassword">Password (at least 6 characters)</label><input id="regPassword" type="password">
+      <p class="error" id="regMsg"></p>
+      <button class="btn" id="registerBtn" type="button">Register</button>
+      <p class="hint">Already have an account? <a href="#" id="showLogin">Login</a></p>
+    </section>
+
+  </div>
+  <footer>CityArena Stadium Booking</footer>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
